@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registered Users</title>
+</head>
+<body>
+  <h1>Registered Users</h1>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Vehicle Reg No</th>
+      <th>Type</th>
+      <th>Make & Model</th>
+      <th>Owner</th>
+      <th>Address</th>
+      <th>Contact</th>
+      <th>Email</th>
+      <th>License No</th>
+    </tr>
+    <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.vehicleRegNumber %></td>
+        <td><%= user.vehicleType %></td>
+        <td><%= user.vehicleMakeModel %></td>
+        <td><%= user.ownerName %></td>
+        <td><%= user.ownerAddress %></td>
+        <td><%= user.ownerContact %></td>
+        <td><%= user.ownerEmail %></td>
+        <td><%= user.drivingLicenseNumber %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <br>
+  <a href="/">Go Back to Registration</a>
+</body>
+</html>
