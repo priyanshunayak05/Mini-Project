@@ -10,6 +10,7 @@ import Notification from './components/Notification';
 import Receipt from './components/Receipt';
 
 const TrafficChallanDashboard = () => {
+  console.log('User Data:', userData); // Debugging line
   const [activeTab, setActiveTab] = useState('dashboard');
   const [filterStatus, setFilterStatus] = useState('all');
   const [selectedChallan, setSelectedChallan] = useState(null);
@@ -71,7 +72,7 @@ const TrafficChallanDashboard = () => {
   // Render main dashboard
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="mx-auto p-6">
         <DashboardHeader user={user} notifications={notifications} />
         
         <StatsOverview 
